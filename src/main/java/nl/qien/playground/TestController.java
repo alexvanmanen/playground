@@ -12,11 +12,12 @@ public class TestController {
 
     @GetMapping("/all")
     public String getTest(){
-        User user = new User();
-        user.setId(1);
-        user.setName("alex");
-        userRepository.save(user);
-        return userRepository.findAll().get(0).getName();
+        throw new NullPointerException();
+//        User user = new User();
+//        user.setId(1);
+//        user.setName("alex");
+//        userRepository.save(user);
+//        return userRepository.findAll().get(0).getName();
     }
 
 //    @PostMapping("/add")
