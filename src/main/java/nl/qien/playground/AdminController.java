@@ -6,11 +6,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/user")
-public class UserController {
+@RequestMapping("/admin/api/user")
+public class AdminController {
 
     private UserRepository userRepository;
 
@@ -18,7 +17,7 @@ public class UserController {
     private JdbcTemplate jdbcTemplate;
 
 
-    public UserController(UserRepository userRepository) {
+    public AdminController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 

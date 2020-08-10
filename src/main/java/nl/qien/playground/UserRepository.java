@@ -12,5 +12,8 @@ public interface UserRepository extends JpaRepository<User, Integer> {
     @Query(value = "SELECT u FROM User u")
     List<User> findAllUsers(Sort sort);
 
-    User findByName(String name);
+    User findByUsername(String name);
+
+
+    //--> WebSecurityConfig--> UserRepositoryUserDetailsService --> UserRepository
 }
