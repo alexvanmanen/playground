@@ -24,8 +24,7 @@ public class UserController {
 
     @GetMapping("/")
     public List<User> getUsers(){
-        userRepository.findByUsername("alex");
-       return userRepository.findAllUsers(Sort.by("name"));
+       return userRepository.findAll();
     }
 
     @PostMapping("/")
