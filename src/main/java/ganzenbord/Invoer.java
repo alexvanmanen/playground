@@ -2,7 +2,7 @@ package ganzenbord;
 
 import java.util.Scanner;
 
-public class invoer {
+public class Invoer {
     public int InvoerInt(String melding){
         int result = 1;
         boolean ok = false;
