@@ -1,9 +1,9 @@
 package ganzenbord;
 
-import java.util.Scanner;
-import java.util.Random;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Random;
+import java.util.Scanner;
 
 
 class ganzenbord {
@@ -11,6 +11,13 @@ class ganzenbord {
 
     public static void main (String args[])
     {
+
+        Speelbord speelbord = new Speelbord();
+        Dobbelsteen dobbelsteen = new StandaardDobbelsteen(Integer.MAX_VALUE);
+
+        Speler speler = new Speler();
+        dobbelsteen.gooi();
+        speelbord.verplaatsAantalStappen(speler, dobbelsteen.getAantalOgen());
 
         System.out.println("Welkom bij ganzenbord.");
 
