@@ -1,6 +1,8 @@
 package ganzenbord;
 
 public class Speler {
+
+
     public int spelen(){
 
         System.out.println("Welkom bij ganzenbord.");
@@ -11,4 +13,6 @@ public class Speler {
         System.out.println("Je speelt met " + spelers + " spelers. Speler 1, druk op G om te gooien en druk op enter.");
         return spelers;
     }
+
+
 }
