@@ -1,7 +1,7 @@
 package ganzenbord;
 
 
-public class TerugNaarStartVak extends ganzenbord.vakken.StandaardVak {
+public class TerugNaarStartVak extends StandaardVak {
 
     public TerugNaarStartVak(int vakNummer, Speelbord speelbord) {
         super(vakNummer, speelbord);

@@ -13,7 +13,7 @@ public class TeslaModel3 implements Auto, Oplaadbaar {
 
     }
 
-    public void opladen() {
+    public void opladen(Stekker stekker) {
 
     }
 }

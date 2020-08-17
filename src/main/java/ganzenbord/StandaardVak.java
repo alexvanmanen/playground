@@ -1,6 +1,6 @@
 package ganzenbord;
 
-public class StandaardVak implements ganzenbord.vakken.Vak {
+public class StandaardVak implements Vak {
 
 
     protected Speelbord speelbord;

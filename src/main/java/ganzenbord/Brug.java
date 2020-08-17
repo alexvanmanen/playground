@@ -1,6 +1,6 @@
 package ganzenbord;
 
-public class Brug extends ganzenbord.vakken.StandaardVak {
+public class Brug extends StandaardVak {
 
     public Brug(int vakNummer, Speelbord speelbord) {
         super(vakNummer, speelbord);

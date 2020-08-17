@@ -1,17 +1,15 @@
 package ganzenbord;
 
-import ganzenbord.vakken.StandaardVak;
-import ganzenbord.vakken.Vak;
-
 import java.util.ArrayList;
 
 public class Speelbord {
 
     ArrayList<Vak> vakken = new ArrayList<>();
+    private static Speelbord instance;
 
-    public Speelbord() {
-        for(int i = 0; i < 63; i++) {
-            vakken.set(i, new ganzenbord.vakken.StandaardVak(i+1, this));
+    private Speelbord() {
+        for(int i = 0; i < 62; i++) {
+            vakken.add(new StandaardVak(i+1, this));
         }
 
         vakken.set(5, new Brug(6, this));
@@ -23,9 +21,16 @@ public class Speelbord {
         // ETC
     }
 
+    public static Speelbord getInstance(){
+        if(instance == null) {
+            instance = new Speelbord();
+        }
+        return instance;
+    }
+
     public void verplaatsAantalStappen(Speler speler, int aantalStappenTeVerplaatsen) {
         int nieuweLocatieAlsCijfer = speler.getLocatie() + aantalStappenTeVerplaatsen;
-        ganzenbord.vakken.Vak nieuweLocatie = vakken.get(nieuweLocatieAlsCijfer);
+        Vak nieuweLocatie = vakken.get(nieuweLocatieAlsCijfer);
         speler.setLocatie(nieuweLocatie);
     }
 
