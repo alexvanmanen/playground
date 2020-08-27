@@ -7,6 +7,22 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BankAccountTest {
 
+
+    /*
+        1. Schrijf alle scenario's die je kunt bedenken met behulp van equivalantieklassen
+        en grenswaarde-analyse op.
+            Voorbeeld:
+                deposit(50); - verwachting: getBalance() == 50
+                deposit(-50); - verwachting: IllegalArgumentException
+
+        2. Schrijf alle scenario's uit in unit tests
+            Zie hieronder
+
+
+     */
+
+
+
     @Test
     public void deposit(){
         //Arrange
