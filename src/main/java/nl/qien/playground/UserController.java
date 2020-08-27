@@ -1,10 +1,15 @@
 package nl.qien.playground;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
+import javax.persistence.EntityNotFoundException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,6 +30,12 @@ public class UserController {
     @GetMapping("/")
     public List<User> getUsers(){
        return userRepository.findAll();
+    }
+
+    @GetMapping("/{id}")
+    public User getUser(@PathVariable Integer  id) throws SQLIntegrityConstraintViolationException {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Could not find id:" +id ));
     }
 
     @PostMapping("/")

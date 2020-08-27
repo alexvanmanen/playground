@@ -22,16 +22,19 @@ public class UserControllerTest {
     UserRepository userRepository;
 
     @Test
-    public void shouldReturnDefaultMessage() throws Exception {
+    public void shouldReturnUsers() throws Exception {
         User user = new User();
-        //user.setId(100);
         user.setUsername("alex");
-
+        User user2 = new User();
+        user.setId(100);
+        user2.setUsername("jan");
         userRepository.save(user);
+        userRepository.save(user2);
 
         this.mockMvc.perform(get("/api/user/"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.[0].username", is("alex")));
+                .andExpect(jsonPath("$.[0].username", is("jan")))
+                .andExpect(jsonPath("$.[1].username", is("alex")));
     }
 }
