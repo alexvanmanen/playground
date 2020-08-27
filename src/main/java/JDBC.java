@@ -8,7 +8,7 @@ public class JDBC {
 
     //  Database credentials
     static final String USER = "root";
-    static final String PASS = "root";
+    static final String PASS = "";
 
     public static void main(String[] args) {
         Connection conn = null;
@@ -36,7 +36,7 @@ public class JDBC {
                 String password = rs.getString("password");
 
                 //Display values
-                System.out.print("ID: " + id);
+                System.out.print("\nID: " + id);
                 System.out.print(", username: " + username);
                 System.out.print(", password: " + password);
             }

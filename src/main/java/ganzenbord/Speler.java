@@ -1,10 +1,10 @@
 package ganzenbord;
 
-<<<<<<< HEAD
+
 public class Speler {
 
 
-    public int spelen(){
+    public int spelen() {
 
         System.out.println("Welkom bij ganzenbord.");
 
@@ -16,18 +16,4 @@ public class Speler {
     }
 
 
-=======
-
-public class Speler {
-
-    private Vak vak;
-
-    public int getLocatie() {
-        return vak.getVakNummer();
-    }
-
-    public void setLocatie(Vak vak) {
-        this.vak = vak;
-    }
->>>>>>> master
 }

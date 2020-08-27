@@ -26,15 +26,15 @@ public class Speelbord {
             instance = new Speelbord();
         }
         return instance;
-    }
+    }}
 
-    public void verplaatsAantalStappen(Speler speler, int aantalStappenTeVerplaatsen) {
-        int nieuweLocatieAlsCijfer = speler.getLocatie() + aantalStappenTeVerplaatsen;
-        Vak nieuweLocatie = vakken.get(nieuweLocatieAlsCijfer);
-        speler.setLocatie(nieuweLocatie);
-    }
+//    public void verplaatsAantalStappen(Speler speler, int aantalStappenTeVerplaatsen) {
+//        int nieuweLocatieAlsCijfer = speler.getLocatie() + aantalStappenTeVerplaatsen;
+//        Vak nieuweLocatie = vakken.get(nieuweLocatieAlsCijfer);
+//        speler.setLocatie(nieuweLocatie);
+//    }
 
-    public void verplaatsSpelerNaarStart(Speler speler) {
-        speler.setLocatie(vakken.get(0));
-    }
-}
+//    public void verplaatsSpelerNaarStart(Speler speler) {
+//        speler.setLocatie(vakken.get(0));
+//    }
+//}

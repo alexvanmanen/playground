@@ -2,7 +2,7 @@ package ganzenbord;
 
 import java.util.Random;
 
-public class StandaardDobbelsteen implements Dobbelsteen {
+public class StandaardDobbelsteen{
 
     private final int maximaleWaarde;
     private int aantalOgen;
