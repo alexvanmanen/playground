@@ -24,9 +24,9 @@ public class PlaygroundApplication implements CommandLineRunner {
     @Override
     @Transactional
     public void run(String... strings) throws Exception {
-        User user = new User();
-        user.setUsername("alex");
-        user.setPassword(passwordEncoder.encode("alex"));
-        userRepository.save(user);
+//        User user = new User();
+//        user.setUsername("alex");
+//        user.setPassword(passwordEncoder.encode("alex"));
+//        userRepository.save(user);
     }
 }
