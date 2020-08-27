@@ -1,5 +1,6 @@
 package nl.qien.playground;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,13 +19,11 @@ import java.util.NoSuchElementException;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 import static org.springframework.http.HttpStatus.CONFLICT;
 
-
-
 @RestControllerAdvice
 public class MyExceptionHandler
         extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
+    @ExceptionHandler({SQLIntegrityConstraintViolationException.class, DataIntegrityViolationException.class})
     protected ResponseEntity<Object> handleSQLException(Exception ex, WebRequest request) {
         return createResponseEntity(ex.getMessage(), CONFLICT);
     }
