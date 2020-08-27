@@ -1,4 +1,4 @@
 package nl.qien.playground.bank;
 
-public class TooMuchBankAccountsException {
+public class TooMuchBankAccountsException extends RuntimeException {
 }
