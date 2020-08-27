@@ -10,10 +10,18 @@ public class BankAccount {
     }
 
     public void deposit(double depositAmount) {
+        if(depositAmount <= 0) {
+            throw new IllegalArgumentException();
+        }
         balance += depositAmount;
     }
 
     public void withdraw(double withdrawAmount) {
+        if(withdrawAmount <= 0) {
+            throw new IllegalArgumentException();
+        } else if(withdrawAmount < balance) {
+            throw new WithdrawalException();
+        }
         balance -= withdrawAmount;
     }
 
